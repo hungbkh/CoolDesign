@@ -167,11 +167,8 @@ public class ContactsActivity extends MActivity
 			@Override
 			public void onClick( View v )
 			{
-				Intent email = new Intent( Intent.ACTION_SEND );
-				email.putExtra( Intent.EXTRA_EMAIL, new String[ ]
-				{ "" }
-						);
-				email.putExtra( Intent.EXTRA_SUBJECT, "Great app" );
+				Intent sharingIntent = new Intent( Intent.ACTION_SEND );
+				sharingIntent.setType( "text/plain" );
 				String body =
 						"COMPANY NAME:       2COOLDESIGN" + "\n" +
 								"CONTACT PERSON:     Guy Tasker" + "\n" +
@@ -181,10 +178,20 @@ public class ContactsActivity extends MActivity
 								"EMAIL:              guy@2cooldesign.co.za, info@2cooldesign.co.za" + "\n" +
 								"ADD:                15 Julian Street, Risiville, Vereeniging, Gauteng, South Africa"
 								+ "\n";
+				sharingIntent
+						.putExtra(
+								android.content.Intent.EXTRA_TEXT,
+								body );
+				startActivity( Intent.createChooser( sharingIntent, "Share using" ) );
 				
-				email.putExtra( Intent.EXTRA_TEXT, body );
-				email.setType( "message/rfc822" );
-				startActivity( Intent.createChooser( email, "Choose an Email client :" ) );
+				// Intent email = new Intent( Intent.ACTION_SEND );
+				//
+				// );
+				// email.putExtra( Intent.EXTRA_SUBJECT, "Great app" );
+				//
+				// email.putExtra( Intent.EXTRA_TEXT, body );
+				// email.setType( "message/rfc822" );
+				// startActivity( Intent.createChooser( email, "Choose an Email client :" ) );
 			}
 		} );
 	}

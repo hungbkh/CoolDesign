@@ -571,9 +571,9 @@
                     android:background="@drawable/bgr_txt"
                     android:gravity="center_vertical"
                     android:paddingLeft="10dp"
-                    android:text="Share to friends"
+                    android:text="Share Company Details With Friends"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="19.5sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>

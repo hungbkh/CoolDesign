@@ -1,5 +1,8 @@
 package com.hdviet.cooldesign;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -62,7 +65,7 @@ public class HomeActivity extends MActivity
 	
 	protected static final long		timeDuration				= 5000;
 	
-	Animation[]						animation					= new Animation[ 2 ];
+	Animation[]						m_animation					= new Animation[ 2 ];
 	
 	int[]							animation_id				=
 																{ R.anim.fade_in, R.anim.fade_out };
@@ -80,24 +83,117 @@ public class HomeActivity extends MActivity
 	Handler							handler						= new Handler( );
 	private Runnable				runnable;
 	
-	private void next( )
-	{
-		nextanimation( );
-		this.mViewFlipper.showNext( );
-	}
+	private int						k							= 0;
 	
-	private void nextanimation( )
+	Timer							timer;
+	
+	public void callAsynchronousTask( long time )
 	{
-		if ( this.mViewFlipper.getDisplayedChild( ) % 2 == 0 )
+		final Handler handler = new Handler( );
+		timer = new Timer( );
+		TimerTask doAsynchronousTask = new TimerTask( )
 		{
-			this.mViewFlipper.setAnimation( this.animation[ 0 ] );
-			this.mViewFlipper.startAnimation( this.animation[ 0 ] );
-			return;
-		}
-		this.mViewFlipper.setAnimation( this.animation[ 1 ] );
-		this.mViewFlipper.startAnimation( this.animation[ 1 ] );
+			@Override
+			public void run( )
+			{
+				handler.post( new Runnable( )
+				{
+					@Override
+					public void run( )
+					{
+						try
+						{
+							// HomeActivity.this.next( );
+						}
+						catch ( Exception e )
+						{
+						}
+					}
+				} );
+			}
+		};
+		timer.schedule( doAsynchronousTask, 0, time ); // execute in every time ms
 	}
 	
+	// private void fadeIn( )
+	// {
+	// this.mViewFlipper.setAnimation( this.animation[ 0 ] );
+	// this.mViewFlipper.startAnimation( this.animation[ 0 ] );
+	// }
+	//
+	// private void fadeOut( )
+	// {
+	// this.mViewFlipper.setAnimation( this.animation[ 1 ] );
+	// this.mViewFlipper.startAnimation( this.animation[ 1 ] );
+	// }
+	
+	// private void next( )
+	// {
+	// // nextanimation( );
+	// if ( k == 0 )
+	// {
+	// fadeIn( );
+	// k = 1;
+	// return;
+	// }
+	// if ( k == 1 )
+	// {
+	// fadeOut( );
+	// k = 2;
+	// return;
+	// }
+	// if ( k == 2 )
+	// {
+	// fadeIn( );
+	// this.mViewFlipper.showNext( ); // 2
+	// k = 3;
+	// return;
+	// }
+	// if ( k == 3 )
+	// {
+	// fadeOut( );
+	// k = 4;
+	// return;
+	// }
+	// if ( k == 4 )
+	// {
+	// fadeIn( );
+	// this.mViewFlipper.showNext( ); // 3
+	// k = 5;
+	// return;
+	// }
+	// if ( k == 5 )
+	// {
+	// fadeOut( );
+	// k = 6;
+	// return;
+	// }
+	//
+	// if ( k == 6 )
+	// {
+	// fadeIn( );
+	// this.mViewFlipper.showNext( ); // 4
+	// k = 7;
+	// return;
+	// }
+	// if ( k == 7 )
+	// {
+	// fadeOut( );
+	// k = 8;
+	// return;
+	// }
+	//
+	// if ( k == 8 )
+	// {
+	// fadeIn( );
+	// this.mViewFlipper.showNext( );
+	// k = 1;
+	// return;
+	// }
+	// Log.d( "k", "k = " + k );
+	//
+	// }
+	//
 	@Override
 	protected void onCreate( Bundle savedInstanceState )
 	{
@@ -115,24 +211,55 @@ public class HomeActivity extends MActivity
 		
 		for ( int k = 0; k < 2; k++ )
 		{
-			animation[ k ] = AnimationUtils.loadAnimation( this, animation_id[ k ] );
+			m_animation[ k ] = AnimationUtils.loadAnimation( this, animation_id[ k ] );
 		}
 		
-		this.runnable = new Runnable( )
+		m_animation[ 0 ].setAnimationListener( new AnimationListener( )
 		{
+			
 			@Override
-			public void run( )
+			public void onAnimationEnd( Animation animation )
 			{
-				HomeActivity.this.next( );
-				HomeActivity.this.handler.postDelayed( HomeActivity.this.runnable,
-						HomeActivity.this.timeDuration );
+				HomeActivity.this.m_animation[ 1 ].setAnimationListener( new AnimationListener( )
+				{
+					
+					@Override
+					public void onAnimationEnd( Animation animation )
+					{
+						mViewFlipper.showNext( );
+						mViewFlipper.startAnimation( m_animation[ 0 ] );
+					}
+					
+					@Override
+					public void onAnimationRepeat( Animation animation )
+					{
+						
+					}
+					
+					@Override
+					public void onAnimationStart( Animation animation )
+					{
+						
+					}
+				} );
+				mViewFlipper.startAnimation( m_animation[ 1 ] );
 			}
-		};
-		this.handler.postDelayed( this.runnable, this.timeDuration );
+			
+			@Override
+			public void onAnimationRepeat( Animation animation )
+			{
+				
+			}
+			
+			@Override
+			public void onAnimationStart( Animation animation )
+			{
+				
+			}
+		} );
+		mViewFlipper.startAnimation( m_animation[ 0 ] );
 		
-		// mViewFlipper.setAutoStart( true );
-		// mViewFlipper.setFlipInterval( 6000 );
-		// mViewFlipper.startFlipping( );
+		// callAsynchronousTask( HomeActivity.timeDuration );
 		
 		// animation listener
 		mAnimationListener = new Animation.AnimationListener( )
