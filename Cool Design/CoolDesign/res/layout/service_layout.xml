@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#ff000000"
     android:orientation="vertical" >
 
+    <include
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        layout="@layout/top_bar" />
+
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp" >
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical" >
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:orientation="vertical"
+            android:paddingBottom="10dp" >
 
-            <ImageView
-                android:id="@+id/appicon"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/topbars" />
+            <!-- <ImageView -->
+            <!-- android:id="@+id/appicon" -->
+            <!-- android:layout_width="fill_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_gravity="center_horizontal" -->
+            <!-- android:src="@drawable/topbars" /> -->
 
             <TextView
                 android:id="@+id/service"
@@ -41,7 +51,7 @@
                 android:background="@drawable/bgr_txt"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
-                android:text="We specialize in"
+                android:text="T-shirt Design"
                 android:textColor="#000000"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -56,7 +66,7 @@
                 android:background="@drawable/bgr_txt"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
-                android:text="-Graphic Design"
+                android:text="T-shirt Printing"
                 android:textColor="#000000"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -71,7 +81,7 @@
                 android:background="@drawable/bgr_txt"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
-                android:text="-Web Design"
+                android:text="Garment Printing"
                 android:textColor="#000000"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -86,7 +96,7 @@
                 android:background="@drawable/bgr_txt"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
-                android:text="-Album Covers"
+                android:text="Customized T-shirts"
                 android:textColor="#000000"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -101,7 +111,7 @@
                 android:background="@drawable/bgr_txt"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
-                android:text="-Logo Design"
+                android:text="Sports T-shirts Printing"
                 android:textColor="#000000"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -116,7 +126,7 @@
                 android:background="@drawable/bgr_txt"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
-                android:text="-App Design"
+                android:text="Kiddies t-shirt Printing"
                 android:textColor="#000000"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -131,7 +141,7 @@
                 android:background="@drawable/bgr_txt"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
-                android:text="-T-shirt Design"
+                android:text="Ladies T-shirt Printing"
                 android:textColor="#000000"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -146,7 +156,7 @@
                 android:background="@drawable/bgr_txt"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
-                android:text="-T-shirt Printing"
+                android:text="Hoodies"
                 android:textColor="#000000"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -161,55 +171,58 @@
                 android:background="@drawable/bgr_txt"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
-                android:text="-Packaging Design"
+                android:text="Caps"
                 android:textColor="#000000"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/alltypes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10.0dip"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="15.0dip"
-                android:background="@drawable/bgr_txt"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:text="All types of design..."
-                android:textColor="#000000"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+            <!-- <TextView -->
+            <!-- android:id="@+id/alltypes" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginLeft="10.0dip" -->
+            <!-- android:layout_marginRight="10dp" -->
+            <!-- android:layout_marginTop="15.0dip" -->
+            <!-- android:background="@drawable/bgr_txt" -->
+            <!-- android:gravity="center_vertical" -->
+            <!-- android:paddingLeft="10dp" -->
+            <!-- android:text="All types of design..." -->
+            <!-- android:textColor="#000000" -->
+            <!-- android:textSize="25sp" -->
+            <!-- android:textStyle="bold" /> -->
 
-            <LinearLayout
-                android:id="@+id/icon_contact"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10.0dip"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="15.0dip"
-                android:background="@drawable/bgr_txt"
-                android:orientation="horizontal" >
 
-                <TextView
-                    android:id="@+id/contactus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:paddingLeft="10dp"
-                    android:text="Contact us for a quote..."
-                    android:textColor="#000000"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+            <!-- <LinearLayout -->
+            <!-- android:id="@+id/icon_contact" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginLeft="10.0dip" -->
+            <!-- android:layout_marginRight="10dp" -->
+            <!-- android:layout_marginTop="15.0dip" -->
+            <!-- android:background="@drawable/bgr_txt" -->
+            <!-- android:orientation="horizontal" > -->
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/icon_contact" />
-            </LinearLayout>
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/contactus" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_gravity="center_vertical" -->
+            <!-- android:paddingLeft="10dp" -->
+            <!-- android:text="Contact us for a quote..." -->
+            <!-- android:textColor="#000000" -->
+            <!-- android:textSize="25sp" -->
+            <!-- android:textStyle="bold" /> -->
+
+
+            <!-- <ImageView -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_gravity="center_vertical" -->
+            <!-- android:layout_marginLeft="10dp" -->
+            <!-- android:src="@drawable/icon_contact" /> -->
+            <!-- </LinearLayout> -->
         </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>
