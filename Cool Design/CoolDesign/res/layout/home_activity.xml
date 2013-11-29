@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        layout="@layout/top_bar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="8.0"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="10.0dip" >
+
+        <!-- <Button -->
+        <!-- android:id="@+id/goleft" -->
+        <!-- android:layout_width="0.0dip" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_gravity="center_vertical" -->
+        <!-- android:layout_marginLeft="3.0dip" -->
+        <!-- android:layout_weight="0.5" -->
+        <!-- android:background="@drawable/leftbutton" -->
+        <!-- android:visibility="gone" /> -->
+
+
+        <!-- <LinearLayout -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:gravity="center_horizontal" -->
+        <!-- android:padding="10.0dip" > -->
+
+        <ViewFlipper
+            android:id="@+id/flipper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!-- </LinearLayout> -->
+
+
+        <!-- <Button -->
+        <!-- android:id="@+id/goright" -->
+        <!-- android:layout_width="0.0dip" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_gravity="center_vertical" -->
+        <!-- android:layout_marginRight="3.0dip" -->
+        <!-- android:layout_weight="0.5" -->
+        <!-- android:background="@drawable/rightbutton" -->
+        <!-- android:visibility="gone" /> -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="2.0"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/service"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_margin="5.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/button"
+            android:fontFamily="@drawable/vodafoneexbd"
+            android:text="SERVICES..."
+            android:textColor="#ffa4a4a4"
+            android:textSize="22.0sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/portfolio"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_margin="5.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/button"
+            android:fontFamily="@drawable/vodafoneexbd"
+            android:text="PORTFOLIO..."
+            android:textColor="#ffa4a4a4"
+            android:textSize="22.0sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="2.0"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/website"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/button"
+            android:fontFamily="@drawable/vodafoneexbd"
+            android:text="WEBSITE..."
+            android:textColor="#ffa4a4a4"
+            android:textSize="22.0sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/contact"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/button"
+            android:fontFamily="@drawable/vodafoneexbd"
+            android:text="CONTACT..."
+            android:textColor="#ffa4a4a4"
+            android:textSize="22.0sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

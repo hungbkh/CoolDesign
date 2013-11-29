@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff000000"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ff000000"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="CONTACT..."
+                android:textColor="#ffa4a4a4"
+                android:textSize="20.0dip"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/company_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2.0"
+                    android:text="COMPANY NAME:"
+                    android:textColor="#ffa4a4a4"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/bgr_txt"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="2COOLDESIGN"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contact"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/contact_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:text="CONTACT PERSON:"
+                    android:textColor="#ffa4a4a4"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/bgr_txt"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Guy Tasker"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2.0"
+                    android:text="TEL:"
+                    android:textColor="#ffa4a4a4"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/tel_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/bgr_txt"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_tel_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="073 171 0962"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="right" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/icon_phone" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fax"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2.0"
+                    android:text="FAX:"
+                    android:textColor="#ffa4a4a4"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/bgr_txt"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="086 524 8688\u0020"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/cell_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2.0"
+                    android:text="CELL:"
+                    android:textColor="#ffa4a4a4"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/cell_phone2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/bgr_txt"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_cel_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="073 171 0962"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="right" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/icon_phone" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2.0"
+                    android:text="EMAIL:"
+                    android:textColor="#ffa4a4a4"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- <TextView -->
+                <!-- android:id="@+id/company_name" -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_marginLeft="10dp" -->
+                <!-- android:layout_marginTop="15.0dip" -->
+                <!-- android:layout_weight="2.0" -->
+                <!-- android:background="@drawable/bgr_txt" -->
+                <!-- android:gravity="center_vertical" -->
+                <!-- android:paddingLeft="10dp" -->
+                <!-- android:text="guy@2cooldesign.co.za" -->
+                <!-- android:textColor="#000000" -->
+                <!-- android:textSize="20sp" -->
+                <!-- android:textStyle="bold" /> -->
+
+                <LinearLayout
+                    android:id="@+id/email2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/bgr_txt"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_email2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="guy@2cooldesign.co.za"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="right" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/icon_email" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- <TextView -->
+                <!-- android:id="@+id/company_name" -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_marginLeft="10dp" -->
+                <!-- android:layout_marginTop="15.0dip" -->
+                <!-- android:layout_weight="2.0" -->
+                <!-- android:background="@drawable/bgr_txt" -->
+                <!-- android:gravity="center_vertical" -->
+                <!-- android:paddingLeft="10dp" -->
+                <!-- android:text="info@2cooldesign.co.za" -->
+                <!-- android:textColor="#000000" -->
+                <!-- android:textSize="20sp" -->
+                <!-- android:textStyle="bold" /> -->
+
+                <LinearLayout
+                    android:id="@+id/email1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/bgr_txt"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_email1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="info@2cooldesign.co.za"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="right" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/icon_email" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- <LinearLayout -->
+            <!-- android:layout_width="fill_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:orientation="horizontal" > -->
+
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/website" -->
+            <!-- android:layout_width="0.0dip" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginLeft="10.0dip" -->
+            <!-- android:layout_marginTop="15.0dip" -->
+            <!-- android:layout_weight="2.0" -->
+            <!-- android:text="WEBSITE:" -->
+            <!-- android:textColor="#ffa4a4a4" -->
+            <!-- android:textSize="14.0dip" -->
+            <!-- android:textStyle="bold" /> -->
+
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/website_name" -->
+            <!-- android:layout_width="0.0dip" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginTop="15.0dip" -->
+            <!-- android:layout_weight="2.0" -->
+            <!-- android:autoLink="web" -->
+            <!-- android:clickable="true" -->
+            <!-- android:text="www.2cooldesign.co.za" -->
+            <!-- android:textColor="#ffa4a4a4" -->
+            <!-- android:textSize="14.0dip" /> -->
+            <!-- </LinearLayout> -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:text="ADD:"
+                    android:textColor="#ffa4a4a4"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/bgr_txt"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/company_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="View on google maps..."
+                        android:textColor="#ff0000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="right" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/icon_map" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- <TextView -->
+                <!-- android:id="@+id/add_detail" -->
+                <!-- android:layout_width="0.0dip" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_marginTop="15.0dip" -->
+                <!-- android:layout_weight="2.0" -->
+                <!-- android:text="15 Julian Street, Risiville" -->
+                <!-- android:textColor="#ffa4a4a4" -->
+                <!-- android:textSize="14.0dip" /> -->
+
+                <TextView
+                    android:id="@+id/company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/bgr_txt"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="15 Julian Street"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/bgr_txt"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Risiville"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/bgr_txt"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Vereeniging"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/bgr_txt"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Gauteng"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/bgr_txt"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="South Africa"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/share"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvshare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:text="Share:"
+                    android:textColor="#ffa4a4a4"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/bgr_txt"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Share to friends"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
